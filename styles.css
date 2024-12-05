@@ -1,3 +1,4 @@
+/* Base Reset and Styling */
 * {
     font-family: monospace;
     margin: 0;
@@ -13,12 +14,13 @@ body, html {
 }
 
 #background-video {
-    position: absolute; /* Let the video scroll with content */
+    position: fixed; /* Fix the video in place */
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    z-index: -1; /* Send the video to the background */
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the screen and maintains aspect ratio */
+    z-index: -1; /* Keeps the video in the background */
 }
 
 /* General Header Styling */
@@ -40,7 +42,6 @@ header {
 #nav-left h1 {
     margin: 0 5px; /* Add space between the headings */
     font-size: 30px;
-   
 }
 
 /* Right Navigation Styling */
@@ -63,21 +64,24 @@ header {
 #nav-right a:hover {
     background-color: white; /* Change background on hover */
 }
-#shop{
+
+#shop {
     color: white;
 }
-#shop1{
+
+#shop1 {
     color: #faff00;
 }
-#offers{
+
+#offers {
     background-color: rgb(255, 0, 0);
 }
+
 /* Image Styling (if needed) */
 header img {
     height: 8vh; /* Adjust height as per design */
     margin-right: 10px; /* Space between the logo and nav-left */
 }
-
 
 header h1 {
     font-size: 30px;
@@ -156,60 +160,50 @@ button#download:hover {
 /* For devices up to 768px (tablets, smaller screens) */
 @media (max-width: 768px) {
     header {
-        height: 15vh; /* Increase header height on smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Adjust height dynamically */
+        text-align: center;
     }
 
-    header h1, #logo-name {
-        font-size: 24px; /* Reduce the font size for smaller screens */
+    #nav-left {
+        justify-content: center; /* Center the logo */
     }
 
-    #box {
-        height: auto;
+    #nav-left img {
+        margin-bottom: 10px;
     }
 
-    #url-box {
-        width: 90%; /* Take up 90% of the width */
+    #nav-right {
+        gap: 10px; /* Adjust spacing between links */
     }
 
-    #download {
-        width: 90%; /* Make the button take up 90% of the width */
-        margin-top: 10px; /* Add space between input and button */
+    #nav-right a {
+        font-size: 14px; /* Reduce font size */
+        padding: 5px 10px; /* Adjust padding for buttons */
     }
 }
 
 /* For devices up to 480px (mobile phones) */
 @media (max-width: 480px) {
     header {
-        flex-direction: column; /* Stack header elements */
-        height: auto;
+        padding: 10px; /* Add some padding */
     }
 
-    header img {
-        height: 8vh; /* Adjust logo size */
+    #nav-left h1, #logo-name {
+        font-size: 20px; /* Reduce font size of the logo */
     }
 
-    header h1, #logo-name {
-        font-size: 20px; /* Further reduce font size */
+    #nav-right {
+        flex-wrap: wrap; /* Allow wrapping for links */
+        gap: 5px; /* Reduce gap between links */
+    }
+
+    #nav-right a {
+        font-size: 12px; /* Smaller text for social links */
+        padding: 4px 8px; /* Adjust padding */
     }
 
     #box {
-        padding: 10px;
-        height: auto;
+        padding: 10px; /* Add padding for form box */
     }
-
-    #url-box {
-        width: 100%; /* Make input full width */
-    }
-
-    #download {
-        width: 100%; /* Make button full width */
-        margin-top: 10px;
-    }
-
-    #footer {
-        font-size: 14px; /* Reduce font size for smaller devices */
-    }
-}
-#sup{
-    color: white;
 }
