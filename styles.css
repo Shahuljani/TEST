@@ -159,6 +159,7 @@ button#download:hover {
 }
 #sup{
     color: white;
+    border: salmon;
 }
 
 /* Media Queries for Responsiveness */
