@@ -1,0 +1,215 @@
+* {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Ensure body grows with content */
+    font-family: Arial, sans-serif;
+}
+
+#background-video {
+    position: absolute; /* Let the video scroll with content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    z-index: -1; /* Send the video to the background */
+}
+
+/* General Header Styling */
+header {
+    height: 10vh;
+    background-color: #AF42AE;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right navs are on opposite sides */
+    align-items: center; /* Aligns content vertically in the header */
+    padding: 0 20px; /* Adds padding on both sides of the header */
+}
+
+/* Left Navigation Styling */
+#nav-left {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#nav-left h1 {
+    margin: 0 5px; /* Add space between the headings */
+    font-size: 30px;
+   
+}
+
+/* Right Navigation Styling */
+#nav-right {
+    display: flex; /* Align links in a row */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Space between the links */
+}
+
+#nav-right a {
+    text-decoration: none; /* Remove underline from links */
+    color: #003d80;
+    font-size: 16px;
+    background-color: #faff00; /* Button-like background */
+    padding: 5px 15px; /* Adds padding for button effect */
+    border-radius: 5px; /* Round corners */
+    transition: background-color 0.3s ease;
+}
+
+#nav-right a:hover {
+    background-color: white; /* Change background on hover */
+}
+#shop{
+    color: white;
+}
+#shop1{
+    color: #faff00;
+}
+#offers{
+    background-color: rgb(255, 0, 0);
+}
+/* Image Styling (if needed) */
+header img {
+    height: 8vh; /* Adjust height as per design */
+    margin-right: 10px; /* Space between the logo and nav-left */
+}
+
+
+header h1 {
+    font-size: 30px;
+    color: white;
+    text-align: left; /* Align text */
+}
+
+#logo-name {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+main {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#box {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 80vh;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+}
+
+#url-box {
+    width: 100%; /* Make the input take full width */
+    max-width: 800px; /* Max width for larger screens */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0; /* Space between elements */
+}
+
+#download {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #AF42AE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#download:hover {
+    background-color: #005bb5;
+}
+
+#footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #C585B3; /* Set the footer background color */
+    color: black; /* Set the text color to black */
+    font-size: 16px;
+}
+
+#premium-text {
+    color: #faff00;
+}
+
+#free-text {
+    background-color: red;
+    color: white;
+    border-radius: 0.1rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices up to 768px (tablets, smaller screens) */
+@media (max-width: 768px) {
+    header {
+        height: 15vh; /* Increase header height on smaller screens */
+    }
+
+    header h1, #logo-name {
+        font-size: 24px; /* Reduce the font size for smaller screens */
+    }
+
+    #box {
+        height: auto;
+    }
+
+    #url-box {
+        width: 90%; /* Take up 90% of the width */
+    }
+
+    #download {
+        width: 90%; /* Make the button take up 90% of the width */
+        margin-top: 10px; /* Add space between input and button */
+    }
+}
+
+/* For devices up to 480px (mobile phones) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        height: auto;
+    }
+
+    header img {
+        height: 8vh; /* Adjust logo size */
+    }
+
+    header h1, #logo-name {
+        font-size: 20px; /* Further reduce font size */
+    }
+
+    #box {
+        padding: 10px;
+        height: auto;
+    }
+
+    #url-box {
+        width: 100%; /* Make input full width */
+    }
+
+    #download {
+        width: 100%; /* Make button full width */
+        margin-top: 10px;
+    }
+
+    #footer {
+        font-size: 14px; /* Reduce font size for smaller devices */
+    }
+}
+#sup{
+    color: white;
+}
