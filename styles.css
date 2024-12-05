@@ -13,15 +13,15 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-#background-video {
-    position: fixed; /* Fix the video in place */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures video fills the screen and maintains aspect ratio */
-    z-index: -1; /* Keeps the video in the background */
-}
+    #background-video {
+        position: absolute; /* Fix the video in place */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures video fills the screen and maintains aspect ratio */
+        z-index: -1; /* Keeps the video in the background */
+    }
 
 /* General Header Styling */
 header {
@@ -163,6 +163,15 @@ button#download:hover {
         flex-direction: column; /* Stack elements vertically */
         height: auto; /* Adjust height dynamically */
         text-align: center;
+    }
+    #background-video {
+        position: absolute; /* Fix the video in place */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures video fills the screen and maintains aspect ratio */
+        z-index: -1; /* Keeps the video in the background */
     }
 
     #nav-left {
