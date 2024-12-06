@@ -197,6 +197,10 @@ button#download:hover {
         font-size: 14px; /* Reduce font size */
         padding: 5px 10px; /* Adjust padding for buttons */
     }
+    #footer{
+        position: absolute;
+        width: 100vw;
+    }
 }
 
 /* For devices up to 480px (mobile phones) */
@@ -239,6 +243,10 @@ button#download:hover {
     #premium-text{
         font-size: 12px;
     }
+    #footer{
+        position: absolute;
+        width: 100vw;
+    }
 }
 @media (max-width: 1024px) and (orientation: portrait) {
     #background-video {
@@ -278,6 +286,10 @@ button#download:hover {
 
     #shop {
         font-size: 7px;
+    }
+    #footer{
+        position: absolute;
+        width: 100vw;
     }
 
 }
