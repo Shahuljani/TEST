@@ -209,7 +209,7 @@ button#download:hover {
     }
 
     #nav-left h1, #logo-name {
-        font-size: 20px; /* Reduce font size of the logo */
+        font-size: 50px; /* Reduce font size of the logo */
     }
 
     #nav-right {
@@ -224,5 +224,8 @@ button#download:hover {
 
     #box {
         padding: 10px; /* Add padding for form box */
+    }
+    #shop{
+        font-size: 7px;
     }
 }
