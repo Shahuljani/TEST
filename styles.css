@@ -18,8 +18,8 @@ body, html {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures video fills the screen and maintains aspect ratio */
+        height: auto;
+        /* Ensures video fills the screen and maintains aspect ratio */
         z-index: -1; /* Keeps the video in the background */
     }
 
@@ -201,11 +201,18 @@ button#download:hover {
 
 /* For devices up to 480px (mobile phones) */
 @media (max-width: 480px) {
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video fills the screen without stretching */
+        z-index: -1; /* Keeps the video in the background */
+    }
+
     header {
         padding: 10px; /* Add some padding */
-    }
-    #background-video {
-        position: absolute; 
     }
 
     #nav-left h1, #logo-name {
@@ -225,7 +232,11 @@ button#download:hover {
     #box {
         padding: 10px; /* Add padding for form box */
     }
-    #shop{
+
+    #shop {
         font-size: 7px;
+    }
+    #premium-text{
+        font-size: 15px;
     }
 }
